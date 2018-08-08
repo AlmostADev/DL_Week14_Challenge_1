@@ -22,15 +22,15 @@
 
 - Revisar y correr la migración. :heavy_check_mark:
 
-- En el modelo *Category* agregar la relación con producto (**has_many**) y verificar que el modelo *Product* se haya creado con la relación correcta (**belongs_to**) :x:
+- En el modelo *Category* agregar la relación con producto (**has_many**) y verificar que el modelo *Product* se haya creado con la relación correcta (**belongs_to**) :heavy_check_mark:
 
     > Recordar la relación entre categoría y producto en el enunciado.
 
-- Crear el controller **products**. :x:
+- Crear el controller **products**. :heavy_check_mark:
 
-- Generar la ruta para la creación de un producto asociado a una categoría. :x:
+- Generar la ruta para la creación de un producto asociado a una categoría. :heavy_check_mark:
 
-    - Para ello modificar la ruta resources de Categories que ahora recibirá un bloque y dentro crearemos la ruta que apuntará al método create de products. :x:
+    - Para ello modificar la ruta resources de Categories que ahora recibirá un bloque y dentro crearemos la ruta que apuntará al método create de products. :heavy_check_mark:
     
     ~~~ruby
     resources :products, only: [:create]
