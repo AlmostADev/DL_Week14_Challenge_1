@@ -1,5 +1,5 @@
+<div class='container'>
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @category.name %>
@@ -8,23 +8,27 @@
 <h1>Products</h1>
 <%= form_with(model: [ @category, Product.new ]) do |form| %>
   <%= form.label :name, "Product"%>
-  <%= form.text_field :name, id: :product_name, class:'from-text' %>
+  <%= form.text_field :name, id: :product_name, class:'form-text' %>
   <br>
   <%= form.label :price, "Price"%>
-  <%= form.text_field :price, id: :product_price, class:'from-text' %>
+  <%= form.text_field :price, id: :product_price, class:'form-text' %>
   <br>
   <br>
   <%= form.submit 'New Product', class:'btn btn-primary' %>
 <%end%>
 
 <br>
-
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
-
-<h1>Products</h1>
-<% @category.products.each do |product| %>
-  <ul>
-    <li> <%= product.name %> $<%= product.price %> <%= link_to "X", category_product_path(@category, product), method: :delete, class:'btn btn-danger' %> </li>
-  </ul>
-<%end%>
+  <div class='row'>
+    <h1>Products</h1>
+    <br>
+    <div class = 'col-md-4'>
+      <% @category.products.each do |product| %>
+        <ul>
+          <li> <%= product.name %> $<%= product.price %> <%= link_to "X", category_product_path(@category, product), method: :delete, class:'btn btn-danger' %> </li>
+        </ul>
+      <%end%>
+    </div>
+  </div>
+</div>
