@@ -1,27 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class = 'container'>
+  <p id="notice"><%= notice %></p>
+  <h1>Categories</h1>
+  <div class = 'row'>
+    <table class = 'table text-center'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th># Products</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<h1>Categories</h1>
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><%= link_to category.name, category %></td>
+            <td><%= category.products.count %></td>
+            <td><%= link_to 'Show', category, class: 'btn btn-primary btn-sm' %></td>
+            <td><%= link_to 'Edit', edit_category_path(category), class: 'btn btn-info btn-sm' %></td>
+            <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <br>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+    <%= link_to 'New Category', new_category_path, class: 'btn btn-success btn-sm' %>
+  </div>
+</div>

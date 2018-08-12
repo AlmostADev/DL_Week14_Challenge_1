@@ -60,22 +60,22 @@
 
 - Junto a cada registro de producto en la tabla se debe añadir un botón para eliminar el producto. Para ello:
 
-    - Agregar el método *destroy* a la ruta anidada. :x:
+    - Agregar el método *destroy* a la ruta anidada. :heavy_check_mark:
 
      ~~~ruby
      resources :products, only: [:create, :destroy] 
      ~~~
 
-     - Crear el método correspondiente en el controller. :x:
+     - Crear el método correspondiente en el controller. :heavy_check_mark:
 
-     - Agregar el botón con el *method: :delete* a cada registro de productos en la tabla. :x:
+     - Agregar el botón con el *method: :delete* a cada registro de productos en la tabla.:heavy_check_mark:
 
 - En la vista *Index* de *categories*: 
-    - Los registros deben estar listados en una tabla (bootstrap) que contenga el nombre de la categoría y la cantidad de productos que existe por categoría (**count**). :x:
+    - Los registros deben estar listados en una tabla (bootstrap) que contenga el nombre de la categoría y la cantidad de productos que existe por categoría (**count**). :heavy_check_mark:
 
-    - Al hacer click en el nombre de la categoría debe redireccionar a la vista *show* de esa categoría. :x:
+    - Al hacer click en el nombre de la categoría debe redireccionar a la vista *show* de esa categoría. :heavy_check_mark:
 
-    - Cada categoría ademas debe ir acompañada de botones para *Edit* y *Destroy* utilizando la clases de bootstrap. :x:
+    - Cada categoría ademas debe ir acompañada de botones para *Edit* y *Destroy* utilizando la clases de bootstrap. :heavy_check_mark:
 
 - En *application.html.erb*:
 	- En una vista parcial, agregar un navbar (**fixed**) con bootstrap con los link para acceder al home (index de categorias) y para agregar nueva categoría. :x:

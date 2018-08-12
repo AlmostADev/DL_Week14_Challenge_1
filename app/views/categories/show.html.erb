@@ -25,6 +25,6 @@
 <h1>Products</h1>
 <% @category.products.each do |product| %>
   <ul>
-    <li> <%= product.name %> $<%= product.price %> </li>
+    <li> <%= product.name %> $<%= product.price %> <%= link_to "X", category_product_path(@category, product), method: :delete, class:'btn btn-danger' %> </li>
   </ul>
 <%end%>
