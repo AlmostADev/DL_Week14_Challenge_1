@@ -36,27 +36,27 @@
     resources :products, only: [:create]
     ~~~
 
-- En la terminal ejecutar **rails routes** para corroborar la ruta creada. La ruta generada debe contener el **:category_id** y apuntar al método **products#create**. :x:
+- En la terminal ejecutar **rails routes** para corroborar la ruta creada. La ruta generada debe contener el **:category_id** y apuntar al método **products#create**. :heavy_check_mark:
 
-- Para poder almacenar un registro en el método create primero debemos generar el filtro de parámetros conocido como **strong params**, para ello: :x:
+- Para poder almacenar un registro en el método create primero debemos generar el filtro de parámetros conocido como **strong params**, para ello: :heavy_check_mark:
 
-    - En el controller **products** crear el método **product_params**. Este método debe permitir y retornar los campos necesarios para la creación de un nuevo producto, es decir, name y price. :x:
+    - En el controller **products** crear el método **product_params**. Este método debe permitir y retornar los campos necesarios para la creación de un nuevo producto, es decir, name y price. :heavy_check_mark:
 
-- En el controller **products** crear el método **create**. Este método debe generar una nueva instancia de *Product* recibiendo como argumento **product_params** y almacenarlo en la BD. Luego redireccionar a la vista *show* de la categoría involucrada. :x:
+- En el controller **products** crear el método **create**. Este método debe generar una nueva instancia de *Product* recibiendo como argumento **product_params** y almacenarlo en la BD. Luego redireccionar a la vista *show* de la categoría involucrada. :heavy_check_mark:
 
-- En la vista *Show* de categories además del detalle de la categoría se debe agregar un formulario que permita ingresar un nuevo producto a la categoría seleccionada. :x:
+- En la vista *Show* de categories además del detalle de la categoría se debe agregar un formulario que permita ingresar un nuevo producto a la categoría seleccionada. :heavy_check_mark:
 
-    - El formulario debe ser generado utilizando el helper *form_with* anidando los dos modelos y debe implementar las clases de bootstrap (revisar docs). :x:
+    - El formulario debe ser generado utilizando el helper *form_with* anidando los dos modelos y debe implementar las clases de bootstrap (revisar docs). :heavy_check_mark:
 
     ~~~ruby
-    <%= form_with(model: [ @category, @product ]) do |form| %> :x:
+    <%= form_with(model: [ @category, @product ]) do |form| %> :heavy_check_mark:
     ~~~
 
-    - Donde **@product** debe ser declarado en el método correspondiente como una nueva instancia de **Product**. :x:
+    - Donde **@product** debe ser declarado en el método correspondiente como una nueva instancia de **Product**. :heavy_check_mark:
 
-    - El formulario debe tener campos para *name* y *price*. :x:
+    - El formulario debe tener campos para *name* y *price*. :heavy_check_mark:
 
-- En la vista *show*, bajo el formulario, se deben listar todos los productos correspondientes a esa categoría en una tabla con los campos *name* y *price*. :x:
+- En la vista *show*, bajo el formulario, se deben listar todos los productos correspondientes a esa categoría en una tabla con los campos *name* y *price*. :heavy_check_mark:
 
 - Junto a cada registro de producto en la tabla se debe añadir un botón para eliminar el producto. Para ello:
 
